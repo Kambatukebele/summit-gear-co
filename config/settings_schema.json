@@ -1,11 +1,11 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Skeleton",
+    "theme_name": "Summit gear co",
     "theme_version": "0.1.0",
-    "theme_author": "Shopify",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_author": "Kamba Tukebele",
+    "theme_documentation_url": "https://kambatukebele.com/",
+    "theme_support_url": "https://kambatukebele.com/"
   },
   {
     "name": "t:general.typography",
