@@ -11,12 +11,43 @@
   "type": "header",
   "name": "t:general.header",
   "sections": {
+    "annoucement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_6cyVkg": {
+          "type": "announcement",
+          "settings": {
+            "announcement_bar_message": "<p>Exclusive offer, buy 2, get 1 for free</p>"
+          }
+        },
+        "announcement_CjxtUa": {
+          "type": "announcement",
+          "settings": {
+            "announcement_bar_message": "<p><strong>Free shipping on orders over $50!</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_6cyVkg",
+        "announcement_CjxtUa"
+      ],
+      "settings": {
+        "announcement_bar_speed": 5,
+        "announcement_bar_background_color": "#F97C1A",
+        "announcement_bar_text_color": "#ffffff",
+        "announcement_bar_text_transform": "uppercase"
+      }
+    },
     "header": {
       "type": "header",
-      "settings": {}
+      "settings": {
+        "menu": "",
+        "customer_account_menu": "customer-account-main-menu"
+      }
     }
   },
   "order": [
+    "annoucement-bar",
     "header"
-  ],
+  ]
 }
