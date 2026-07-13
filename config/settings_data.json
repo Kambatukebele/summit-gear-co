@@ -8,5 +8,23 @@
  * ------------------------------------------------------------
  */
 {
-  "current": {}
+  "current": {
+    "heading_font": "mona_sans_n7",
+    "body_font": "mona_sans_n4",
+    "sub_heading_font": "mona_sans_i4",
+    "accent_font": "mona_sans_n3",
+    "heading_one_text_size": 120,
+    "heading_one_text_line_height": 114,
+    "heading_two_text_size": 90,
+    "heading_two_text_line_height": 90,
+    "heading_three_text_size": 60,
+    "heading_three_text_line_height": 60,
+    "heading_four_text_size": 40,
+    "heading_four_text_line_height": 40,
+    "heading_five_text_size": 28,
+    "heading_five_text_line_height": 32,
+    "heading_six_text_size": 18,
+    "heading_six_text_line_height": 16,
+    "content_for_index": []
+  }
 }

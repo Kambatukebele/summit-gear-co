@@ -6,5 +6,205 @@
     "theme_author": "Kamba Tukebele",
     "theme_documentation_url": "https://kambatukebele.com/",
     "theme_support_url": "https://kambatukebele.com/"
+  },
+  {
+    "name": "t:settings_schema.logo_favicon.name",
+    "settings": [
+      {
+        "type": "image_picker",
+        "label": "t:settings_schema.logo_favicon.settings.default_logo.label",
+        "id": "default_logo",
+        "info": "t:settings_schema.logo_favicon.settings.default_logo.info"
+      },
+      {
+        "type": "image_picker",
+        "label": "t:settings_schema.logo_favicon.settings.mobile_logo.label",
+        "id": "mobile_logo",
+        "info": "t:settings_schema.logo_favicon.settings.mobile_logo.info"
+      },
+      {
+        "type": "image_picker",
+        "label": "t:settings_schema.logo_favicon.settings.inverse_logo.label",
+        "id": "inverse_logo",
+        "info": "t:settings_schema.logo_favicon.settings.inverse_logo.info"
+      },
+      {
+        "type": "image_picker",
+        "label": "t:settings_schema.logo_favicon.settings.favicon.label",
+        "id": "favicon",
+        "info": "t:settings_schema.logo_favicon.settings.favicon.info"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.typography.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.typography.settings.header_fonts.content"
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "t:settings_schema.typography.settings.heading_font.label",
+        "default": "inter_n4"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font",
+        "label": "t:settings_schema.typography.settings.body_font.label",
+        "default": "inter_n4"
+      },
+      {
+        "type": "font_picker",
+        "id": "sub_heading_font",
+        "label": "t:settings_schema.typography.settings.sub_heading_font.label",
+        "default": "inter_n4"
+      },
+      {
+        "type": "font_picker",
+        "id": "accent_font",
+        "label": "t:settings_schema.typography.settings.accent_font.label",
+        "default": "inter_n4"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.typography.settings.header_headings_text_size.content"
+      },
+      {
+        "type": "range",
+        "id": "heading_one_text_size",
+        "label": "t:settings_schema.typography.settings.heading_one_text_size.label",
+        "min": 24,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "default": 48
+      },
+      {
+        "type": "range",
+        "id": "heading_one_text_line_height",
+        "label": "t:settings_schema.typography.settings.heading_one_text_line_height.label",
+        "min": 24,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "heading_two_text_size",
+        "label": "t:settings_schema.typography.settings.heading_two_text_size.label",
+        "min": 24,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "default": 30
+      },
+      {
+        "type": "range",
+        "id": "heading_two_text_line_height",
+        "label": "t:settings_schema.typography.settings.heading_two_text_line_height.label",
+        "min": 24,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "heading_three_text_size",
+        "label": "t:settings_schema.typography.settings.heading_three_text_size.label",
+        "min": 24,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "default": 24
+      },
+      {
+        "type": "range",
+        "id": "heading_three_text_line_height",
+        "label": "t:settings_schema.typography.settings.heading_three_text_line_height.label",
+        "min": 24,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "heading_four_text_size",
+        "label": "t:settings_schema.typography.settings.heading_four_text_size.label",
+        "min": 20,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "heading_four_text_line_height",
+        "label": "t:settings_schema.typography.settings.heading_four_text_line_height.label",
+        "min": 24,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "heading_five_text_size",
+        "label": "t:settings_schema.typography.settings.heading_five_text_size.label",
+        "min": 18,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 18
+      },
+      {
+        "type": "range",
+        "id": "heading_five_text_line_height",
+        "label": "t:settings_schema.typography.settings.heading_five_text_line_height.label",
+        "min": 24,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "heading_six_text_size",
+        "label": "t:settings_schema.typography.settings.heading_six_text_size.label",
+        "min": 16,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "heading_six_text_line_height",
+        "label": "t:settings_schema.typography.settings.heading_six_text_line_height.label",
+        "min": 16,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "default": 18
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.typography.settings.header_paragraph_text_style.content"
+      },
+      {
+        "type": "range",
+        "id": "paragraph_text_size",
+        "label": "t:settings_schema.typography.settings.paragraph_text_size.label",
+        "min": 12,
+        "max": 24,
+        "step": 1,
+        "unit": "px",
+        "default": 16
+      }
+    ]
   }
 ]

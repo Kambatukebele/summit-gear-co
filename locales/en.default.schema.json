@@ -72,6 +72,122 @@
       "title": "Title",
       "subtitle": "Subtitle",
       "normal": "Normal text"
+    }
+  },
+  "settings_schema": {
+    "logo_favicon": {
+      "name": "Logo and favicon",
+      "settings": {
+        "default_logo": {
+          "label": "Default logo",
+          "info": "This logo will be used in the header and footer of your store."
+        },
+        "mobile_logo": {
+          "label": "Mobile logo",
+          "info": "This logo will be used in the header and footer of your store on mobile devices."
+        },
+        "inverse_logo": {
+          "label": "Inverse logo",
+          "info": "This logo will be used in the header and footer of your store when the header is sticky."
+        },
+        "favicon": {
+          "label": "Favicon",
+          "info": "This image will be used as the favicon for your store."
+        }
+      }
     },
+    "typography": {
+      "name": "Typography",
+      "settings": {
+        "header_fonts": {
+          "content": "Fonts"
+        },
+        "heading_font": {
+          "label": "Heading font"
+        },
+        "body_font": {
+          "label": "Body font"
+        },
+        "sub_heading_font": {
+          "label": "Subheading font"
+        },
+        "accent_font": {
+          "label": "Accent font"
+        },
+        "header_headings_text_size": {
+          "content": "Headings text size"
+        },
+
+        "heading_one_text_size": {
+          "label": "H1"
+        },
+        "heading_one_text_line_height": {
+          "label": "H1 line height"
+        },
+        "heading_two_text_size": {
+          "label": "H2"
+        },
+        "heading_two_text_line_height": {
+          "label": "H2 line height"
+        },
+        "heading_three_text_size": {
+          "label": "H3"
+        },
+        "heading_three_text_line_height": {
+          "label": "H3 line height"
+        },
+        "heading_four_text_size": {
+          "label": "H4"
+        },
+        "heading_four_text_line_height": {
+          "label": "H4 line height"
+        },
+        "heading_five_text_size": {
+          "label": "H5"
+        },
+        "heading_five_text_line_height": {
+          "label": "H5 line height"
+        },
+        "heading_six_text_size": {
+          "label": "H6"
+        },
+        "heading_six_text_line_height": {
+          "label": "H6 line height"
+        },
+        "header_paragraph_text_style": {
+          "content": "Paragraph"
+        },
+        "paragraph_text_size": {
+          "label": "Paragraph text size"
+        }
+      }
+    }
+  },
+  "sections": {
+    "announcement_bar": {
+      "name": "Announcement bar",
+      "settings": {
+        "header_announcement_bar": {
+          "content": "Announcement bar",
+          "info": "This section is used to display an announcement bar at the top of the page."
+        },
+        "announcement_bar_background_color": {
+          "label": "Background color"
+        },
+        "announcement_bar_text_color": {
+          "label": "Text color"
+        }
+      },
+      "blocks": {
+        "name": "Announcement",
+        "settings": {
+          "announcement_message": {
+            "label": "Write your announcement",
+            "default": "<p>Free shipping on orders over $50!</p>",
+            "info": "Here goes your announcement message. You can use HTML tags to format your text."
+          }
+        }
+      }
+    }
   }
 }
