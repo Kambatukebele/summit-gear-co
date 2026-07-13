@@ -1,0 +1,86 @@
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+h1 {
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+  font-style: var(--font-heading-style);
+  font-size: var(--h1-size);
+  line-height: var(--h1-line-height);
+}
+h2 {
+  font-family: var(--font-heading-family);
+  font-size: var(--h2-size);
+  line-height: var(--h2-line-height);
+}
+h3 {
+  font-family: var(--font-heading-family);
+  font-size: var(--h3-size);
+  line-height: var(--h3-line-height);
+}
+h4 {
+  font-family: var(--font-heading-family);
+  font-size: var(--h4-size);
+  line-height: var(--h4-line-height);
+}
+h5 {
+  font-family: var(--font-heading-family);
+  font-size: var(--h5-size);
+  line-height: var(--h5-line-height);
+}
+h6 {
+  font-family: var(--font-heading-family);
+  font-size: var(--h6-size);
+  line-height: var(--h6-line-height);
+}
+p,
+a,
+button,
+span,
+li {
+  font-family: var(--font-body-family);
+  font-weight: var(--font-body-weight);
+  font-size: var(--paragraph-size);
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}

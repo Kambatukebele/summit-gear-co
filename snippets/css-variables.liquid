@@ -1,18 +1,37 @@
 {% style %}
   {% # Loads all font variantions with display: swap %}
-  {{ settings.type_primary_font | font_face: font_display: 'swap' }}
-  {{ settings.type_primary_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
-  {{ settings.type_primary_font | font_modify: 'weight', 'bold' | font_modify: 'style', 'italic' | font_face: font_display: 'swap' }}
-  {{ settings.type_primary_font | font_modify: 'style', 'italic' | font_face: font_display: 'swap' }}
+  {{ settings.heading_font | font_face: font_display: 'swap' }}
+  {{ settings.body_font | font_face: font_display: 'swap' }}
+  {{ settings.sub_heading_font | font_face: font_display: 'swap' }}
+  {{ settings.accent_font | font_face: font_display: 'swap' }}
+
 
   :root {
-    --font-primary--family: {{ settings.type_primary_font.family }}, {{ settings.type_primary_font.fallback_families }};
-    --font-primary--style: {{ settings.type_primary_font.style }};
-    --font-primary--weight: {{ settings.type_primary_font.weight }};
-    --page-width: {{ settings.max_page_width }};
-    --page-margin: {{ settings.min_page_margin }}px;
-    --color-background: {{ settings.background_color }};
-    --color-foreground: {{ settings.foreground_color }};
-    --style-border-radius-inputs: {{ settings.input_corner_radius }}px;
+    --font-heading-family: {{ settings.heading_font.family }}, {{ settings.heading_font.fallback_families }};
+    --font-heading-style: {{ settings.heading_font.style }};
+    --font-heading-weight: {{ settings.heading_font.weight }};
+
+    --font-body-family: {{ settings.body_font.family }}, {{ settings.body_font.fallback_families }};
+    --font-body-style: {{ settings.body_font.style }};
+    --font-body-weight: {{ settings.body_font.weight }};
+
+    --font-subheading-family: {{ settings.sub_heading_font.family }}, {{ settings.sub_heading_font.fallback_families }};
+    --font-accent-family: {{ settings.accent_font.family }}, {{ settings.accent_font.fallback_families }};
+
+    --h1-size: {{ settings.heading_one_text_size }}px;
+    --h2-size: {{ settings.heading_two_text_size }}px;
+    --h3-size: {{ settings.heading_three_text_size }}px;
+    --h4-size: {{ settings.heading_four_text_size }}px;
+    --h5-size: {{ settings.heading_five_text_size }}px;
+    --h6-size: {{ settings.heading_six_text_size }}px;
+    --paragraph-size: {{ settings.paragraph_text_size }}px;
+
+    /* Line Heights */
+    --h1-line-height: {{ settings.heading_one_text_line_height }}px;
+    --h2-line-height: {{ settings.heading_two_text_line_height }}px;
+    --h3-line-height: {{ settings.heading_three_text_line_height }}px;
+    --h4-line-height: {{ settings.heading_four_text_line_height }}px;
+    --h5-line-height: {{ settings.heading_five_text_line_height }}px;
+    --h6-line-height: {{ settings.heading_six_text_line_height }}px;
   }
 {% endstyle %}
