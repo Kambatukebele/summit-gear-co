@@ -75,6 +75,9 @@
     }
   },
   "settings_schema": {
+    "color_palette": {
+      "name": "Color palette"
+    },
     "logo_favicon": {
       "name": "Logo and favicon",
       "settings": {
@@ -186,6 +189,45 @@
             "default": "<p>Free shipping on orders over $50!</p>",
             "info": "Here goes your announcement message. You can use HTML tags to format your text."
           }
+        }
+      }
+    },
+    "header": {
+      "name": "Header",
+      "settings": {
+        "header_header_navigation": {
+          "content": "Header navigation",
+          "info": "This section is used to display the header navigation."
+        },
+        "header_link_list": {
+          "label": "Header menu"
+        },
+        "header_color": {
+          "label": "Header background color"
+        },
+        "header_text_color": {
+          "label": "Header text color"
+        },
+        "header_enabled_border": {
+          "content": "Enable border",
+          "info": "Decide if you want to show the border bottom of the header"
+        },
+        "header_enabled_header_border": {
+          "label": "Enable border",
+          "info": "Show the border by checking up the checkbox"
+        },
+        "header_color_header_border": {
+          "label": "Header border color"
+        },
+        "header_icon_background": {
+          "content": "Icon background",
+          "info": "This handle the color and background color for the icon whishlist and cart"
+        },
+        "header_header_icon_background": {
+          "label": "Icon background"
+        },
+        "header_header_icon_content": {
+          "label": "Icon content"
         }
       }
     }
