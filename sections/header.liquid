@@ -1,22 +1,257 @@
-<header></header>
+<header
+  style="--background-color: {{ settings.background_color }}; --color: {{ settings.text_color }}; {%- if section.settings.enabled_header_border -%}--border:{{ section.settings.color_header_border }};{%- endif -%};--icon-color-content:{{ section.settings.header_icon_content }};--icon-color-bg:{{ section.settings.header_icon_background }}"
+  class="header"
+  role="banner"
+>
+  <div class="header__wrapper container">
+    <div class="header__content">
+      <!-- Navigation Hamburger Menu -->
+      <div class="header__hamburger">
+        <span class="header__hamburger-icon">
+          {% render 'icon-hamburger' %}
+        </span>
+      </div>
+      <!-- Navigation Menu -->
+      {% render 'mobile-menu' %}
+      {% render 'desktop-menu' %}
+      <!-- Navigation Logo -->
+      <div class="header__logo">
+        {% if settings.logo %}
+          <a href="{{ shop.url }}" class="header__logo-link">
+            {{
+              settings.logo
+              | image_url: width: 200, height: 200
+              | image_tag: class: 'header__logo-image', alt: shop.name
+            }}
+          </a>
+        {% else %}
+          <a href="{{ shop.url }}" class="header__logo-link">
+            <h5 class="header__logo-text">{{ shop.name }}</h5>
+          </a>
+        {% endif %}
+      </div>
+      <!-- Navigation User Actions -->
+      <div class="header__user-actions">
+        <div class="header__search">
+          <span class="header__search-icon">
+            {% render 'icon-search' %}
+          </span>
+        </div>
+        <div class="header__account">
+          <span class="header__account-icon">
+            {% render 'icon-user' %}
+          </span>
+        </div>
+        <div class="header__whishlist relative">
+          <span class="header__whishlist-icon">
+            {% render 'icon-heart' %}
+          </span>
+          <span class="header__whishlist-count absolute"> 0 </span>
+        </div>
+        <div class="header__cart relative">
+          <span class="header__cart-icon">
+            {% render 'icon-cart' %}
+          </span>
+          <span class="header__cart-count absolute">0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
 {% stylesheet %}
+  .header {
+    background-color: var(--background-color);
+    color: var(--color);
+    position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 8px 0px;
+    gap: 8px;
+  }
+  .header__hamburger {
+    order: 1;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: start;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  .header__hamburger-icon,
+  .header__whishlist-icon,
+  .header__cart-icon,
+  .header__search-icon,
+  .header__account-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__logo {
+    order: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+  }
+  .header__logo .header__logo-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+  }
+  .header__logo .header__logo-link .header__logo-text {
+    color: black;
+  }
+  .header__user-actions {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    gap: 8px;
+  }
+  .header__search,
+  .header__account {
+    display: none;
+  }
+  .header__whishlist,
+  .header__cart,
+  .header__account,
+  .header__search {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .header__whishlist-count,
+  .header__cart-count {
+    top: 0px;
+    right: 0px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--icon-color-bg);
+    color: var(--icon-color-content);
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    .header__content {
+      flex-wrap: nowrap;
+      width: 100%;
+      align-items: center;
+      gap: 0px;
+    }
+    .header__hamburger {
+      display: none;
+    }
+    .header__user-actions {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
 {% endstylesheet %}
+
+{% javascript %}
+  class Header {
+    constructor() {
+      this.hamburger = document.querySelector('.header__hamburger-icon');
+      this.desktopMenu = document.querySelector('.mobile-mobile-header__menus');
+      this.mobileCloneBtn = document.querySelector('.mobile-header__close-btn');
+
+      // animation: myAnim 2s ease 0s 1 normal forwards;
+
+      this.hamburger.addEventListener('click', () => {
+        //Open the mobile menu navigation
+        //this.desktopMenu.style.transform = 'translate(0px)';
+        this.desktopMenu.classList.add('mobile-mobile-header__menus--animation');
+      });
+
+      this.mobileCloneBtn.addEventListener('click', () => {
+        //this.desktopMenu.style.transform = 'translate(-3100px)';
+        this.desktopMenu.classList.remove('mobile-mobile-header__menus--animation');
+      });
+    }
+  }
+
+  const header = new Header();
+{% endjavascript %}
 
 {% schema %}
 {
-  "name": "t:general.header",
+  "name": "t:sections.header.name",
   "settings": [
     {
-      "type": "link_list",
-      "id": "menu",
-      "label": "t:labels.menu"
+      "type": "header",
+      "content": "t:sections.header.settings.header_header_navigation.content",
+      "info": "t:sections.header.settings.header_header_navigation.info"
     },
     {
       "type": "link_list",
-      "id": "customer_account_menu",
-      "label": "t:labels.customer_account_menu",
-      "default": "customer-account-main-menu"
+      "id": "menu",
+      "label": "t:sections.header.settings.header_link_list.label"
+    },
+    {
+      "type": "color_background",
+      "id": "background_color",
+      "label": "t:sections.header.settings.header_color.label",
+      "default": "{{ settings.color_palette.background }}"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.header.settings.header_text_color.label",
+      "default": "{{ settings.color_palette.text }}"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.header_enabled_border.content",
+      "info": "t:sections.header.settings.header_enabled_border.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enabled_header_border",
+      "label": "t:sections.header.settings.header_enabled_header_border.label",
+      "default": false,
+      "info": "t:sections.header.settings.header_enabled_header_border.info"
+    },
+    {
+      "type": "color",
+      "id": "color_header_border",
+      "label": "t:sections.header.settings.header_color_header_border.label",
+      "default": "{{ settings.color_palette.border }}"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.header_icon_background.content",
+      "info": "t:sections.header.settings.header_icon_background.info"
+    },
+    {
+      "type": "color",
+      "id": "header_icon_background",
+      "label": "t:sections.header.settings.header_header_icon_background.label",
+      "default": "{{ settings.color_palette.background }}"
+    },
+    {
+      "type": "color",
+      "id": "header_icon_content",
+      "label": "t:sections.header.settings.header_header_icon_content.label",
+      "default": "{{ settings.color_palette.text }}"
     }
   ]
 }

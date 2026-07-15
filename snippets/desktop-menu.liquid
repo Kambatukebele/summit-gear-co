@@ -1,0 +1,30 @@
+<nav class="desktop-nav">
+  {%- for item in (1..5) -%}
+    <li class="desktop__list">
+      <a href="#" class="desktop__link">Home</a>
+    </li>
+  {%- endfor -%}
+</nav>
+
+{% stylesheet %}
+  .desktop-nav {
+    display: none;
+  }
+  @media (min-width: 1024px) {
+    .desktop-nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+    }
+    .desktop__list {
+      list-style: none;
+      padding: 8px;
+    }
+    .desktop__link {
+      text-decoration: none;
+      color: black;
+    }
+  }
+{% endstylesheet %}

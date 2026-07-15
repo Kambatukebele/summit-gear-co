@@ -42,7 +42,12 @@
       "type": "header",
       "settings": {
         "menu": "",
-        "customer_account_menu": "customer-account-main-menu"
+        "background_color": "{{ settings.color_palette.background }}",
+        "text_color": "{{ settings.color_palette.text }}",
+        "enabled_header_border": true,
+        "color_header_border": "{{ settings.color_palette.border }}",
+        "header_icon_background": "{{ settings.color_palette.secondary_dark }}",
+        "header_icon_content": "{{ settings.color_palette.background }}"
       }
     }
   },
