@@ -7,6 +7,20 @@
 
 
   :root {
+    --color-primary: {{ settings.color_palette.primary }};
+    --color-primary-dark: {{ settings.color_palette.primary_dark }};
+
+    --color-secondary: {{ settings.color_palette.secondary }};
+    --color-secondary-dark: {{ settings.color_palette.secondary_dark }};
+
+    --color-text: {{ settings.color_palette.text }};
+    --color-text-muted: {{ settings.color_palette.text_muted }};
+
+    --color-border: {{ settings.color_palette.border }};
+
+    --color-background: {{ settings.color_palette.background }};
+    --color-surface: {{ settings.color_palette.surface }};
+
     --font-heading-family: {{ settings.heading_font.family }}, {{ settings.heading_font.fallback_families }};
     --font-heading-style: {{ settings.heading_font.style }};
     --font-heading-weight: {{ settings.heading_font.weight }};
